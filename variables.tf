@@ -1,3 +1,9 @@
+variable "packet_project_name" {
+  description = "The project name - defaults to org name"
+  type        = string
+  default     = ""
+}
+
 variable "skip_registration" {
   description = "Boolean to skip executing registration command"
   type        = bool
@@ -31,37 +37,10 @@ variable "tags" {
   default     = {}
 }
 
-########
-# Label
-########
-variable "environment" {
-  description = "The environment"
-  type        = string
-  default     = "dev"
-}
-
-variable "namespace" {
-  description = "The namespace to deploy into"
-  type        = string
-  default     = "icon"
-}
-
-variable "stage" {
-  description = "The stage of the deployment"
-  type        = string
-  default     = "blue"
-}
-
 variable "network_name" {
   description = "mainnet or testnet - Don't mess this up!!!!!!!!"
   type        = string
   default     = "mainnet"
-}
-
-variable "owner" {
-  description = "Owner of the infrastructure"
-  type        = string
-  default     = "insight"
 }
 
 ##############
@@ -91,74 +70,5 @@ variable "organization_website" {
   description = "Needs to begin in https / http - can be google..."
   type        = string
   default     = ""
-}
-
-#########
-# Details
-#########
-variable "logo_256" {
-  description = "Path to png logo"
-  type        = string
-  default     = ""
-}
-variable "logo_1024" {
-  description = "Path to png logo"
-  type        = string
-  default     = ""
-}
-variable "logo_svg" {
-  description = "Path to svg logo"
-  type        = string
-  default     = ""
-}
-variable "steemit" {
-  description = "Link to social media account - https://..."
-  type        = string
-  default     = ""
-}
-variable "twitter" {
-  description = "Link to social media account - https://..."
-  type        = string
-  default     = ""
-}
-variable "youtube" {
-  description = "Link to social media account - https://..."
-  type        = string
-  default     = ""
-}
-variable "facebook" {
-  description = "Link to social media account - https://..."
-  type        = string
-  default     = ""
-}
-variable "github" {
-  description = "Link to social media account - https://..."
-  type        = string
-  default     = ""
-}
-variable "reddit" {
-  description = "Link to social media account - https://..."
-  type        = string
-  default     = ""
-}
-variable "keybase" {
-  description = "Link to social media account - https://..."
-  type        = string
-  default     = ""
-}
-variable "telegram" {
-  description = "Link to social media account - https://..."
-  type        = string
-  default     = ""
-}
-variable "wechat" {
-  description = "Link to social media account - https://..."
-  type        = string
-  default     = ""
-}
-variable "server_type" {
-  description = "Link to social media account - https://..."
-  type        = string
-  default     = "cloud"
 }
 

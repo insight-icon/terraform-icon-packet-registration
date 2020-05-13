@@ -3,17 +3,11 @@ terraform {
 }
 
 locals {
-  tags = merge(var.tags, { "Name" = "${var.network_name}-ip" })
-}
-
-variable "packet_project_name" {
-  description = "The project name"
-  type        = string
-  default     = "aws-registration-ci"
+  packet_project_name = var.packet_project_name == "" ? title(var.organization_name) : var.packet_project_name
 }
 
 resource "packet_project" "this" {
-  name = var.packet_project_name
+  name = local.packet_project_name
 }
 
 resource "packet_reserved_ip_block" "this" {

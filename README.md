@@ -73,35 +73,18 @@ No issue is creating limit on this module.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
 | details\_endpoint | The endpoint to find details.json | `string` | n/a | yes |
-| environment | The environment | `string` | `"dev"` | no |
-| facebook | Link to social media account - https://... | `string` | `""` | no |
-| github | Link to social media account - https://... | `string` | `""` | no |
-| keybase | Link to social media account - https://... | `string` | `""` | no |
 | keystore\_password | The keystore password | `string` | n/a | yes |
 | keystore\_path | the path to your keystore | `string` | n/a | yes |
-| logo\_1024 | Path to png logo | `string` | `""` | no |
-| logo\_256 | Path to png logo | `string` | `""` | no |
-| logo\_svg | Path to svg logo | `string` | `""` | no |
-| namespace | The namespace to deploy into | `string` | `"icon"` | no |
 | network\_name | mainnet or testnet - Don't mess this up!!!!!!!! | `string` | `"mainnet"` | no |
 | organization\_city | No qualifiers | `string` | `""` | no |
 | organization\_country | This needs to be three letter country code per https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3 | `string` | `""` | no |
 | organization\_email | Needs to be real email | `string` | `""` | no |
 | organization\_name | Any string - your team name | `string` | `""` | no |
 | organization\_website | Needs to begin in https / http - can be google... | `string` | `""` | no |
-| owner | Owner of the infrastructure | `string` | `"insight"` | no |
-| packet\_project\_name | The project name | `string` | `"aws-registration-ci"` | no |
+| packet\_project\_name | The project name - defaults to org name | `string` | `""` | no |
 | public\_ip | Optional if you are registering an IP from a different network - only creates details content, leave blank and insert cloud provdier to create ip | `string` | `""` | no |
-| reddit | Link to social media account - https://... | `string` | `""` | no |
-| server\_type | Link to social media account - https://... | `string` | `"cloud"` | no |
 | skip\_registration | Boolean to skip executing registration command | `bool` | `false` | no |
-| stage | The stage of the deployment | `string` | `"blue"` | no |
-| steemit | Link to social media account - https://... | `string` | `""` | no |
 | tags | Additional tags to include | `map(string)` | `{}` | no |
-| telegram | Link to social media account - https://... | `string` | `""` | no |
-| twitter | Link to social media account - https://... | `string` | `""` | no |
-| wechat | Link to social media account - https://... | `string` | `""` | no |
-| youtube | Link to social media account - https://... | `string` | `""` | no |
 
 ## Outputs
 
@@ -110,6 +93,7 @@ No issue is creating limit on this module.
 | details\_content | n/a |
 | details\_endpoint | n/a |
 | network\_name | n/a |
+| packet\_project\_name | n/a |
 | public\_ip | n/a |
 | registration\_command | n/a |
 | registration\_json | n/a |

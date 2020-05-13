@@ -1,3 +1,7 @@
+output "packet_project_name" {
+  value = var.packet_project_name
+}
+
 output "public_ip" {
   value = module.registration.public_ip
 }
