@@ -21,17 +21,12 @@ func TestPacket(t *testing.T) {
 
 	fixturesDir := path.Join(cwd, "fixtures")
 	keystorePath := path.Join(fixturesDir, "./keystore/testnet")
-	logoPath := path.Join(fixturesDir, "./logos/insight.png")
 
 	terraformOptions := &terraform.Options{
 		TerraformDir: exampleFolder,
 		Vars: map[string]interface{}{
-			"aws_region":    "us-east-1",
 			"keystore_path": keystorePath,
 			"keystore_password": "testing1.",
-			"logo_256": logoPath,
-			"logo_1024": logoPath,
-			"logo_svg": logoPath,
 		},
 	}
 

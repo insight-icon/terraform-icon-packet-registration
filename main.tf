@@ -16,7 +16,7 @@ resource "packet_project" "this" {
   name = var.packet_project_name
 }
 
-resource "packet_reserved_ip_block" "test" {
+resource "packet_reserved_ip_block" "this" {
   project_id = packet_project.this.id
   type       = "global_ipv4"
   quantity   = 1
@@ -27,7 +27,7 @@ module "registration" {
 
   skip_registration = var.skip_registration
 
-  public_ip       = var.public_ip == "" ? join("", aws_eip.this.*.public_ip) : var.public_ip
+  public_ip       = split("/", packet_reserved_ip_block.this.cidr_notation)[0]
   static_endpoint = var.details_endpoint
   network_name    = var.network_name
 
