@@ -31,9 +31,8 @@ module "defaults" {
   # Needs to begin in https / http - can be google...
 
 
-
   keystore_password = var.keystore_password
   keystore_path     = local.keystore_path
 
-  details_endpoint = ""
+  details_endpoint = "https://raw.githubusercontent.com/insight-icon/terraform-icon-packet-registration/master/test/fixtures/details.json"
 }
