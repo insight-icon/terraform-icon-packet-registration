@@ -13,5 +13,5 @@ workflows:
   default:
     jobs:
       - test:
-          context: aws-ci-1
+          context: packet-ci-1
   version: 2
