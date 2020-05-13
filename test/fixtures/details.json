@@ -1,0 +1,28 @@
+{
+  "representative": {
+    "logo": {
+      "logo_256": "",
+      "logo_1024": "",
+      "logo_svg": ""
+    },
+    "media": {
+      "steemit": "",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "",
+      "github": "",
+      "reddit": "",
+      "keybase": "",
+      "telegram": "",
+      "wechat": ""
+    }
+  },
+  "server": {
+    "location": {
+      "country": "USA",
+      "city":  "San Francisco"
+    },
+    "server_type": "cloud",
+    "api_endpoint": "18.209.219.194:9000"
+  }
+}

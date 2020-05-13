@@ -1,0 +1,17 @@
+jobs:
+  test:
+    docker:
+      - image: insightinfrastructure/icon-ci:v0.2.0
+    steps:
+      - checkout
+      - run: |
+          pip3 install -r requirements.txt
+          make test
+
+version: 2.1
+workflows:
+  default:
+    jobs:
+      - test:
+          context: aws-ci-1
+  version: 2
